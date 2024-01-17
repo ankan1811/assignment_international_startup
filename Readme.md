@@ -46,7 +46,7 @@ The base URL for all endpoints is: `http://localhost:4000/`
 
 ### Register User
 
-- **Endpoint:** `/api/register`
+- **Endpoint:** `/register`
 - **Method:** `POST`
 - **Description:** Register a new user by providing username, email, and password in the request body.
 - **Request Body:**
@@ -62,7 +62,7 @@ The base URL for all endpoints is: `http://localhost:4000/`
 
 ### Login User
 
-- **Endpoint:** `/api/login`
+- **Endpoint:** `/login`
 - **Method:** POST
   Description: Authenticate and log in a user. Provide email and password in the request body.
 
@@ -76,3 +76,19 @@ Request Body:
 ```
 
 Response: Returns a JWT token if successful for further authentication.
+
+### Admin Dashboard
+
+- **Endpoint:** `/admindashboard`
+- **Method:** GET
+  Description: Provide the token in the authentication header.Only "admin" role can access this route. .
+
+Response: displays content of admin dashboard.
+
+### User Dashboard
+
+- **Endpoint:** `/userdashboard`
+- **Method:** GET
+  Description: Provide the token in the authentication header.Only "user" role can access this route..
+
+Response: displays content of user dashboard.
